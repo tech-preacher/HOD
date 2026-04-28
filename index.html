@@ -1,0 +1,757 @@
+<html lang="en" class="scroll-smooth"><head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hands on Deck — Talent &amp; Performance Systems</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: {
+            50:  '#fdfaf2',
+            100: '#faf4e3',
+            200: '#f3e9c9',
+            300: '#ead9a4',
+            400: '#d6bf7c',
+          },
+          gold: {
+            300: '#e6c878',
+            400: '#d4af48',
+            500: '#c9a227',
+            600: '#a9851a',
+            700: '#8a6c14',
+          },
+          brown: {
+            400: '#8a6a4a',
+            500: '#5c4530',
+            600: '#3d2e1f',
+            700: '#2a2015',
+            800: '#1c160e',
+            900: '#120e08',
+          },
+        }
+      }
+    }
+  }
+</script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Fraunces:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Inter', sans-serif;
+background-color: #0a0805;
+color: #d6cdb8;
+}
+.font-serif-display {
+font-family: 'Fraunces', serif;
+font-feature-settings: "ss01" on;
+letter-spacing: -0.02em;
+}
+.glass-panel {
+background: rgba(245, 240, 225, 0.025);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(234, 217, 164, 0.10);
+}
+.grid-bg {
+background-image: linear-gradient(to right, rgba(92,69,48,0.45) 1px, transparent 1px),
+linear-gradient(to bottom, rgba(92,69,48,0.45) 1px, transparent 1px);
+background-size: 4rem 4rem;
+mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+-webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+}
+.text-gradient-cream {
+background: linear-gradient(to bottom right, #fdfaf2, #d6bf7c);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.text-gradient-gold {
+background: linear-gradient(to right, #e6c878, #d4af48);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-track {
+background: #0a0805;
+}
+::-webkit-scrollbar-thumb {
+background: #3d2e1f;
+border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #5c4530;
+}
+</style></head>
+<body class="text-cream-100/70 antialiased selection:bg-gold-500/30 selection:text-cream-50">
+
+    <!-- Background Grid -->
+    <div class="fixed inset-0 z-0 grid-bg pointer-events-none opacity-40"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-cream-200/5 bg-black/60 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <a href="#" class="text-cream-50 font-semibold tracking-tight text-sm md:text-base">
+                    HANDS <span class="text-gold-400">ON</span> DECK
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#approach" class="hover:text-cream-50 transition-colors">Approach</a>
+                <a href="#services" class="hover:text-cream-50 transition-colors">Services</a>
+                <a href="#process" class="hover:text-cream-50 transition-colors">How We Work</a>
+                <a href="#who" class="hover:text-cream-50 transition-colors">Who It's For</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="text-sm font-medium hover:text-cream-50 transition-colors hidden sm:block">Contact</a>
+                <a href="#contact" class="text-xs font-medium bg-cream-50 text-brown-800 px-4 py-2 rounded-full hover:bg-cream-100 transition-colors">
+                    Work With Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold-500/25 bg-gold-500/10 text-gold-300 text-xs font-medium mb-8">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+                A talent &amp; performance system for growing businesses
+            </div>
+
+            <h1 class="font-serif-display text-5xl md:text-7xl font-medium tracking-tight text-cream-50 mb-6 leading-[1.05]">
+                We are <span class="text-brown-500">not</span><br>
+                an <span class="text-gradient-gold italic">HR firm.</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-cream-100/60 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Most HR firms help you hire. We help you build people who can actually carry your business —
+                identifying potential, developing it, placing it where it matters, and building the structure that makes it perform.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3 bg-cream-50 text-brown-800 font-medium rounded-full hover:bg-cream-100 transition-colors flex items-center justify-center gap-2 text-sm">
+                    Start a Conversation
+                    <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                </a>
+                <a href="#approach" class="w-full sm:w-auto px-8 py-3 glass-panel text-cream-50 font-medium rounded-full hover:bg-cream-100/10 transition-colors text-sm">
+                    See Our Approach
+                </a>
+            </div>
+        </div>
+
+        <!-- Abstract Visualization: The Gap -->
+        <div class="mt-20 relative max-w-5xl mx-auto hidden md:block select-none">
+            <!-- Glow effect -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gold-500/15 blur-[100px] rounded-full"></div>
+
+            <div class="grid grid-cols-3 gap-6 relative z-10">
+                <!-- Column 1: On Paper (Faded) -->
+                <div class="glass-panel p-6 rounded-2xl opacity-40 scale-95 transform rotate-[-2deg] border-dashed border-brown-500">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-full bg-brown-600 flex items-center justify-center">
+                            <iconify-icon icon="lucide:file-text" class="text-brown-400" width="14"></iconify-icon>
+                        </div>
+                        <div class="h-2 w-24 bg-brown-600 rounded"></div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="h-1.5 w-full bg-brown-700 rounded"></div>
+                        <div class="h-1.5 w-5/6 bg-brown-700 rounded"></div>
+                        <div class="h-1.5 w-4/6 bg-brown-700 rounded"></div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-brown-700">
+                        <p class="text-xs text-brown-400 text-center">On paper • Looks fine</p>
+                    </div>
+                </div>
+
+                <!-- Column 2: The Gap (Active) -->
+                <div class="bg-brown-900 border border-gold-500/30 p-6 rounded-2xl shadow-2xl shadow-gold-500/10 transform scale-105 z-20">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-brown-500 flex items-center justify-center text-cream-50 text-xs font-semibold">
+                                <iconify-icon icon="lucide:layers" width="18"></iconify-icon>
+                            </div>
+                            <div>
+                                <div class="text-sm text-cream-50 font-medium">The Gap</div>
+                                <div class="text-xs text-gold-400">Where we step in</div>
+                            </div>
+                        </div>
+                        <div class="px-2 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-[10px] text-gold-300 font-medium">Active</div>
+                    </div>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="bg-brown-800/60 p-2 rounded border border-gold-500/5 flex items-center gap-2 text-xs text-cream-100/70">
+                            <iconify-icon icon="lucide:users" width="12" class="text-gold-400"></iconify-icon>
+                            Wrong people in critical roles
+                        </div>
+                        <div class="bg-brown-800/60 p-2 rounded border border-gold-500/5 flex items-center gap-2 text-xs text-cream-100/70">
+                            <iconify-icon icon="lucide:trending-down" width="12" class="text-gold-400"></iconify-icon>
+                            Good people underperforming
+                        </div>
+                        <div class="bg-brown-800/60 p-2 rounded border border-gold-500/5 flex items-center gap-2 text-xs text-cream-100/70">
+                            <iconify-icon icon="lucide:alert-triangle" width="12" class="text-gold-400"></iconify-icon>
+                            No system holding it together
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Working System (Data) -->
+                <div class="glass-panel p-6 rounded-2xl transform rotate-[2deg]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-medium text-cream-50">Working System</span>
+                        <iconify-icon icon="lucide:check-circle-2" class="text-gold-400" width="14"></iconify-icon>
+                    </div>
+                    <div class="flex items-end gap-2 mb-2">
+                        <span class="font-serif-display text-3xl font-medium text-cream-50 tracking-tight">In place</span>
+                    </div>
+                    <p class="text-[10px] text-cream-100/50 leading-relaxed">
+                        Right people. Right roles. Structure that holds. A business that runs without constant strain.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem / Point of View Section -->
+    <section class="py-24 px-6 border-t border-cream-200/5 bg-brown-900/40" id="approach">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                <div class="max-w-2xl">
+                    <span class="text-gold-400 font-medium text-xs tracking-[0.2em] uppercase mb-3 block">Our Point of View</span>
+                    <h2 class="font-serif-display text-3xl md:text-4xl font-medium text-cream-50 tracking-tight mb-4">Three problems most companies don't admit.</h2>
+                    <p class="text-lg text-cream-100/60 font-light">
+                        Even when companies hire well, things still break. The reasons are almost always the same — and almost always invisible from the inside.
+                    </p>
+                </div>
+                <div class="hidden md:block">
+                    <iconify-icon icon="lucide:arrow-down-right" class="text-brown-500" width="48"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Problem 1 -->
+                <div class="group glass-panel p-8 rounded-2xl hover:bg-cream-100/5 transition-colors duration-300">
+                    <div class="text-gold-400 font-serif-display text-2xl mb-4">01</div>
+                    <h3 class="text-lg font-medium text-cream-50 mb-3">They don't know how to spot real talent</h3>
+                    <p class="text-sm text-cream-100/60 leading-relaxed">
+                        Most hiring decisions lean on credentials and obvious experience — not on the underlying potential, adaptability, or capacity to grow into responsibility.
+                    </p>
+                </div>
+
+                <!-- Problem 2 -->
+                <div class="group glass-panel p-8 rounded-2xl hover:bg-cream-100/5 transition-colors duration-300">
+                    <div class="text-gold-400 font-serif-display text-2xl mb-4">02</div>
+                    <h3 class="text-lg font-medium text-cream-50 mb-3">They don't invest in making people effective</h3>
+                    <p class="text-sm text-cream-100/60 leading-relaxed">
+                        Hiring is treated as the finish line. But real performance comes from clarity, discipline, accountability and behavior aligned to the business — not from offer letters.
+                    </p>
+                </div>
+
+                <!-- Problem 3 -->
+                <div class="group glass-panel p-8 rounded-2xl hover:bg-cream-100/5 transition-colors duration-300">
+                    <div class="text-gold-400 font-serif-display text-2xl mb-4">03</div>
+                    <h3 class="text-lg font-medium text-cream-50 mb-3">They have no system supporting performance</h3>
+                    <p class="text-sm text-cream-100/60 leading-relaxed">
+                        Without organisational design, performance tracking and practical policies, even great people fail — and the founder ends up holding everything together personally.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <p class="text-cream-50 text-base md:text-lg font-light italic font-serif-display">We solve all three — at the same time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Pillars / Services Section -->
+    <section class="py-24 px-6 border-t border-cream-200/5" id="services">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div class="max-w-2xl">
+                    <span class="text-gold-400 font-medium text-xs tracking-[0.2em] uppercase mb-3 block">What We Deliver</span>
+                    <h2 class="font-serif-display text-3xl md:text-4xl font-medium text-cream-50 tracking-tight mb-4">Five pillars. One working system.</h2>
+                    <p class="text-lg text-cream-100/60 font-light">
+                        Every engagement is built on the same five foundations — designed to work together, not in isolation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Pillar 1 -->
+                <div class="group glass-panel p-8 rounded-2xl hover:bg-cream-100/5 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-500/20 to-brown-500/30 border border-gold-500/30 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="lucide:user-search" width="22"></iconify-icon>
+                        </div>
+                        <span class="text-gold-400/60 font-serif-display text-sm">01</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-cream-50 mb-2">Recruitment &amp; Talent Sourcing</h3>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-4">
+                        Strategic hiring, not reactive recruitment.
+                    </p>
+                    <ul class="space-y-1.5 text-xs text-cream-100/50">
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Role fit, performance &amp; long-term value</li>
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Potential-led candidate evaluation</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="group glass-panel p-8 rounded-2xl hover:bg-cream-100/5 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-500/20 to-brown-500/30 border border-gold-500/30 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="lucide:layout-grid" width="22"></iconify-icon>
+                        </div>
+                        <span class="text-gold-400/60 font-serif-display text-sm">02</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-cream-50 mb-2">HR Systems &amp; Structure</h3>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-4">
+                        Policies, frameworks, and operational systems that hold.
+                    </p>
+                    <ul class="space-y-1.5 text-xs text-cream-100/50">
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Performance management frameworks</li>
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Accountability structures &amp; org design</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="group glass-panel p-8 rounded-2xl hover:bg-cream-100/5 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-500/20 to-brown-500/30 border border-gold-500/30 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="lucide:shield-check" width="22"></iconify-icon>
+                        </div>
+                        <span class="text-gold-400/60 font-serif-display text-sm">03</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-cream-50 mb-2">Payroll &amp; Compliance</h3>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-4">
+                        Accurate, structured, and compliant payroll systems.
+                    </p>
+                    <ul class="space-y-1.5 text-xs text-cream-100/50">
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Risk reduction &amp; regulatory alignment</li>
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Clean processes that scale with growth</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="group glass-panel p-8 rounded-2xl hover:bg-cream-100/5 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-500/20 to-brown-500/30 border border-gold-500/30 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="lucide:target" width="22"></iconify-icon>
+                        </div>
+                        <span class="text-gold-400/60 font-serif-display text-sm">04</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-cream-50 mb-2">Performance &amp; Productivity</h3>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-4">
+                        KPI systems and performance tracking that drive results.
+                    </p>
+                    <ul class="space-y-1.5 text-xs text-cream-100/50">
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Team accountability frameworks</li>
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Behavior aligned to business outcomes</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 5 -->
+                <div class="group glass-panel p-8 rounded-2xl hover:bg-cream-100/5 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-500/20 to-brown-500/30 border border-gold-500/30 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="lucide:globe" width="22"></iconify-icon>
+                        </div>
+                        <span class="text-gold-400/60 font-serif-display text-sm">05</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-cream-50 mb-2">Remote Workforce Solutions</h3>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-4">
+                        Global talent sourcing and remote team management.
+                    </p>
+                    <ul class="space-y-1.5 text-xs text-cream-100/50">
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Hybrid &amp; distributed team systems</li>
+                        <li class="flex gap-2"><iconify-icon icon="lucide:dot" class="text-gold-400 mt-0.5"></iconify-icon> Cross-border talent &amp; coordination</li>
+                    </ul>
+                </div>
+
+                <!-- Closing card -->
+                <div class="bg-gradient-to-br from-brown-700 to-brown-900 border border-gold-500/20 rounded-2xl p-8 flex flex-col justify-between">
+                    <div>
+                        <iconify-icon icon="lucide:link-2" class="text-gold-400 mb-4" width="28"></iconify-icon>
+                        <h3 class="font-serif-display text-xl text-cream-50 mb-2 leading-snug">Built to work together.</h3>
+                        <p class="text-sm text-cream-100/70 leading-relaxed">
+                            Each pillar reinforces the next — so your business doesn't just hire well, it performs consistently and scales without strain.
+                        </p>
+                    </div>
+                    <a href="#contact" class="mt-6 text-sm font-medium text-gold-300 hover:text-gold-200 inline-flex items-center gap-2">
+                        Talk to us about a fit <iconify-icon icon="lucide:arrow-right" width="14"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="py-24 px-6 border-t border-cream-200/5 bg-brown-900/40" id="process">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <span class="text-gold-400 font-medium text-xs tracking-[0.2em] uppercase mb-3 block">How We Work</span>
+                <h2 class="font-serif-display text-3xl md:text-4xl font-medium text-cream-50 tracking-tight">A working system, not a theory.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Step 1 -->
+                <div class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:bg-cream-100/5 transition-colors duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-brown-800 border border-gold-500/20 flex items-center justify-center text-gold-300 shrink-0">
+                            <iconify-icon icon="lucide:eye" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gold-400 font-medium mb-1 tracking-[0.2em]">STEP 01</div>
+                            <h3 class="text-xl font-medium text-cream-50">We see what others miss</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-6">
+                        We don't just recruit based on experience. We look for potential, adaptability, and the capacity to grow into responsibility — because the best people for your business are often not the most obvious ones.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Potential</span>
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Adaptability</span>
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Capacity to grow</span>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:bg-cream-100/5 transition-colors duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-brown-800 border border-gold-500/20 flex items-center justify-center text-gold-300 shrink-0">
+                            <iconify-icon icon="lucide:trending-up" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gold-400 font-medium mb-1 tracking-[0.2em]">STEP 02</div>
+                            <h3 class="text-xl font-medium text-cream-50">We turn people into assets</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-6">
+                        Hiring is not the win. Performance is. We work with your team to clarify roles, set expectations, build discipline and accountability, and align behavior with your business goals — so people don't just show up, they deliver.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Role clarity</span>
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Accountability</span>
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Aligned behavior</span>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:bg-cream-100/5 transition-colors duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-brown-800 border border-gold-500/20 flex items-center justify-center text-gold-300 shrink-0">
+                            <iconify-icon icon="lucide:layout-grid" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gold-400 font-medium mb-1 tracking-[0.2em]">STEP 03</div>
+                            <h3 class="text-xl font-medium text-cream-50">We build systems that hold it together</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-6">
+                        Without structure, even great people fail. We put in place clear organisational design, performance tracking, practical HR policies, and simple accountability systems — so your business stops relying on constant firefighting.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Org design</span>
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Performance tracking</span>
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Practical policy</span>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-panel rounded-2xl p-8 relative overflow-hidden group hover:bg-cream-100/5 transition-colors duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-brown-800 border border-gold-500/20 flex items-center justify-center text-gold-300 shrink-0">
+                            <iconify-icon icon="lucide:anchor" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gold-400 font-medium mb-1 tracking-[0.2em]">STEP 04</div>
+                            <h3 class="text-xl font-medium text-cream-50">We stay until it works</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-cream-100/60 leading-relaxed mb-6">
+                        Most firms exit after delivery. We don't. We stay involved to monitor performance, adjust what isn't working, support leadership decisions, and keep the system running — because the real test isn't setup, it's consistency.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Ongoing support</span>
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Adjustment</span>
+                        <span class="px-3 py-1 rounded-full border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80">Consistency</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Built For Section -->
+    <section class="py-24 px-6 border-y border-cream-200/5" id="who">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left Content -->
+                <div class="order-2 lg:order-1">
+                    <span class="text-gold-400 font-medium text-xs tracking-[0.2em] uppercase mb-3 block">Who We Are Built For</span>
+                    <h2 class="font-serif-display text-3xl md:text-4xl font-medium text-cream-50 tracking-tight mb-6">If your business depends on you holding it together — we are built for you.</h2>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center shrink-0 border border-gold-500/25">
+                                <iconify-icon icon="lucide:rocket" class="text-gold-300" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-cream-50 font-medium mb-1">Growing quickly</h4>
+                                <p class="text-sm text-cream-100/60 leading-relaxed">
+                                    Your demand is outpacing what your team can absorb, and the gaps are starting to show.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center shrink-0 border border-gold-500/25">
+                                <iconify-icon icon="lucide:gauge" class="text-gold-300" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-cream-50 font-medium mb-1">Feeling internal pressure</h4>
+                                <p class="text-sm text-cream-100/60 leading-relaxed">
+                                    Founders are overcompensating, leadership is stretched, and the strain is becoming the operating model.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center shrink-0 border border-gold-500/25">
+                                <iconify-icon icon="lucide:activity" class="text-gold-300" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-cream-50 font-medium mb-1">Inconsistent team performance</h4>
+                                <p class="text-sm text-cream-100/60 leading-relaxed">
+                                    Some weeks work, some weeks don't, and no one can quite explain why.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center shrink-0 border border-gold-500/25">
+                                <iconify-icon icon="lucide:scaling" class="text-gold-300" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-cream-50 font-medium mb-1">Trying to scale without breaking</h4>
+                                <p class="text-sm text-cream-100/60 leading-relaxed">
+                                    You want to grow — and you want the business to hold its growth, not buckle under it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right UI Mockup: Team Health Dashboard -->
+                <div class="order-1 lg:order-2 relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-gold-500/20 to-brown-500/20 blur-2xl opacity-40 rounded-full"></div>
+                    <div class="glass-panel rounded-xl border border-gold-500/15 p-1 shadow-2xl bg-brown-900">
+                        <!-- Window Header -->
+                        <div class="h-8 border-b border-cream-200/5 flex items-center px-4 gap-2">
+                            <div class="w-2.5 h-2.5 rounded-full bg-brown-600"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-brown-600"></div>
+                            <div class="ml-3 text-[10px] text-cream-100/40">Team Performance Overview</div>
+                        </div>
+                        <!-- UI Content -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="text-sm font-medium text-cream-50">Operations Team</h3>
+                                <button class="text-xs bg-cream-50 text-brown-800 px-3 py-1.5 rounded-md font-medium">This Quarter</button>
+                            </div>
+
+                            <!-- Row 1 -->
+                            <div class="flex items-center justify-between p-3 mb-2 rounded-lg bg-gold-500/10 border border-gold-500/25">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded bg-gradient-to-br from-gold-400 to-brown-500 flex items-center justify-center text-cream-50 text-[10px] font-semibold">RA</div>
+                                    <div>
+                                        <div class="text-xs text-cream-50 font-medium mb-0.5">Right person, right role</div>
+                                        <div class="text-[10px] text-cream-100/40">Performing as expected</div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xs font-semibold text-gold-300">On track</div>
+                                </div>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="flex items-center justify-between p-3 mb-2 rounded-lg bg-cream-100/5 border border-cream-200/5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded bg-brown-700 flex items-center justify-center text-cream-100 text-[10px] font-semibold">MK</div>
+                                    <div>
+                                        <div class="text-xs text-cream-50 font-medium mb-0.5">Underperforming — coachable</div>
+                                        <div class="text-[10px] text-cream-100/40">Plan in place</div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xs font-medium text-gold-400">Adjusting</div>
+                                </div>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="flex items-center justify-between p-3 rounded-lg bg-cream-100/5 border border-cream-200/5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded bg-brown-700 flex items-center justify-center text-cream-100 text-[10px] font-semibold">SL</div>
+                                    <div>
+                                        <div class="text-xs text-cream-50 font-medium mb-0.5">Wrong role — repositioning</div>
+                                        <div class="text-[10px] text-cream-100/40">Internal move identified</div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xs font-medium text-cream-100/50">In review</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 pt-4 border-t border-cream-200/5 flex items-center justify-between">
+                                <div class="text-[10px] text-cream-100/40">System health</div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-24 h-1 bg-brown-700 rounded-full overflow-hidden">
+                                        <div class="h-full bg-gold-400 w-[78%]"></div>
+                                    </div>
+                                    <div class="text-[10px] text-gold-300 font-medium">78%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We Win + What We're Building (Bento) -->
+    <section class="py-24 px-6 bg-brown-900/40">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <span class="text-gold-400 font-medium text-xs tracking-[0.2em] uppercase mb-3 block">Why We Win</span>
+                <h2 class="font-serif-display text-3xl md:text-4xl font-medium text-cream-50 tracking-tight">We do the part most firms avoid.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+
+                <!-- Big card -->
+                <div class="lg:col-span-7 glass-panel rounded-2xl p-8 relative overflow-hidden group">
+                    <div class="relative z-10 h-full flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif-display text-2xl font-medium text-cream-50 mb-3 leading-snug">We work inside the problem — until it's solved.</h3>
+                            <p class="text-sm text-cream-100/60 max-w-md leading-relaxed">
+                                We go beyond hiring into behavior, structure, accountability and execution.
+                                We don't sit outside the business. We sit inside it, with you.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-wrap gap-3">
+                             <div class="px-3 py-1.5 rounded-md border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80 flex items-center gap-2">
+                                <iconify-icon icon="lucide:compass" class="text-gold-400"></iconify-icon> Behavior
+                             </div>
+                             <div class="px-3 py-1.5 rounded-md border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80 flex items-center gap-2">
+                                <iconify-icon icon="lucide:building-2" class="text-gold-400"></iconify-icon> Structure
+                             </div>
+                             <div class="px-3 py-1.5 rounded-md border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80 flex items-center gap-2">
+                                <iconify-icon icon="lucide:scale" class="text-gold-400"></iconify-icon> Accountability
+                             </div>
+                             <div class="px-3 py-1.5 rounded-md border border-gold-500/15 bg-cream-100/5 text-xs text-cream-100/80 flex items-center gap-2">
+                                <iconify-icon icon="lucide:flag" class="text-gold-400"></iconify-icon> Execution
+                             </div>
+                        </div>
+                    </div>
+                    <div class="absolute right-0 bottom-0 w-64 h-48 bg-gradient-to-tl from-gold-500/10 to-transparent border-t border-l border-cream-200/5 rounded-tl-2xl translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                </div>
+
+                <!-- Tall Card: What we're building -->
+                <div class="lg:col-span-5 bg-gradient-to-b from-brown-700 to-black border border-gold-500/15 rounded-2xl p-8 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <iconify-icon icon="lucide:hammer" class="text-gold-300 mb-4" width="32"></iconify-icon>
+                        <h3 class="font-serif-display text-xl font-medium text-cream-50 mb-2">What we're building</h3>
+                        <p class="text-sm text-cream-100/70 leading-relaxed mb-4">
+                            Not another HR consultancy — a talent and performance system for growing businesses.
+                        </p>
+                        <ul class="space-y-2 text-xs text-cream-100/80">
+                            <li class="flex gap-2"><iconify-icon icon="lucide:check" class="text-gold-300 mt-0.5"></iconify-icon> Talent that's developed, not just found</li>
+                            <li class="flex gap-2"><iconify-icon icon="lucide:check" class="text-gold-300 mt-0.5"></iconify-icon> Teams that are structured, not just assembled</li>
+                            <li class="flex gap-2"><iconify-icon icon="lucide:check" class="text-gold-300 mt-0.5"></iconify-icon> Businesses that hold their growth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Truth / CTA Section -->
+    <section class="py-32 px-6 text-center relative overflow-hidden" id="contact">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gold-700/10 pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <span class="text-gold-400 font-medium text-xs tracking-[0.2em] uppercase mb-4 block">The Simple Truth</span>
+            <h2 class="font-serif-display text-4xl md:text-5xl font-medium text-cream-50 tracking-tight mb-6 leading-tight">
+                A business is only as strong as the people inside it — and the system guiding them.
+            </h2>
+            <p class="text-lg text-cream-100/60 mb-10 max-w-2xl mx-auto font-light">
+                Most companies get one wrong. Many get both wrong. We fix both — so the right people are in the right roles, those people know what to do, and your business runs without constant strain.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#" class="w-full sm:w-auto px-8 py-3 bg-cream-50 text-brown-800 font-medium rounded-full hover:bg-cream-100 transition-colors flex items-center justify-center gap-2">
+                    Work with us
+                    <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                </a>
+                <a href="#approach" class="w-full sm:w-auto px-8 py-3 border border-gold-500/30 text-cream-50 font-medium rounded-full hover:bg-cream-100/5 transition-colors">
+                    Learn more
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-cream-200/5 py-12 px-6 bg-black">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="col-span-2 md:col-span-1">
+                <a href="#" class="text-cream-50 font-semibold tracking-tight text-base block mb-4">
+                    HANDS <span class="text-gold-400">ON</span> DECK
+                </a>
+                <p class="text-xs text-cream-100/40 leading-relaxed">
+                    A talent and performance system<br>
+                    for growing businesses.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-cream-50 text-xs font-medium mb-4">Services</h4>
+                <ul class="space-y-2 text-xs text-cream-100/40">
+                    <li><a href="#services" class="hover:text-cream-50 transition-colors">Recruitment &amp; Talent</a></li>
+                    <li><a href="#services" class="hover:text-cream-50 transition-colors">HR Systems &amp; Structure</a></li>
+                    <li><a href="#services" class="hover:text-cream-50 transition-colors">Payroll &amp; Compliance</a></li>
+                    <li><a href="#services" class="hover:text-cream-50 transition-colors">Performance &amp; Productivity</a></li>
+                    <li><a href="#services" class="hover:text-cream-50 transition-colors">Remote Workforce</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-cream-50 text-xs font-medium mb-4">Company</h4>
+                <ul class="space-y-2 text-xs text-cream-100/40">
+                    <li><a href="#approach" class="hover:text-cream-50 transition-colors">Approach</a></li>
+                    <li><a href="#process" class="hover:text-cream-50 transition-colors">How We Work</a></li>
+                    <li><a href="#who" class="hover:text-cream-50 transition-colors">Who It's For</a></li>
+                    <li><a href="#contact" class="hover:text-cream-50 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-cream-50 text-xs font-medium mb-4">Legal</h4>
+                <ul class="space-y-2 text-xs text-cream-100/40">
+                    <li><a href="#" class="hover:text-cream-50 transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-cream-50 transition-colors">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-cream-200/5 text-center md:text-left">
+            <p class="text-[10px] text-cream-100/30">© Hands on Deck HR Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body></html>
